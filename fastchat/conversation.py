@@ -340,6 +340,7 @@ class Conversation:
         return self.system_message
 
     def append_message(self, role: str, message: str):
+        self.messages[-2][-1] = message
         """Append a new message."""
         self.messages.append([role, message])
 
